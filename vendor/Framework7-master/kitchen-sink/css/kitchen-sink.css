@@ -1,3 +1,32 @@
+#draggable {
+  position: absolute;
+  left: 50px;
+}
+#droppable {
+  position: absolute;
+  left: 500px;
+  width: 450px;
+  height: 450px;
+  padding: 0.5em;
+  margin: 10px;
+}
+.food_circle {
+  width: 230px;
+  height: 230px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-image: url('https://lh6.googleusercontent.com/-5QMAQvCult8/Ujij551WwLI/AAAAAAAAAEw/4s1Gkc9YJyQ/s800/2013-09-17');
+  margin-left: auto;
+  margin-right: auto;
+  margin: 10px 10px 10px 0;
+  border: 3px solid grey;
+  background-size: cover;
+}
+.food_title {
+  text-align: center;
+  font-size: 20px;
+}
 .panel {
   background: #222;
   color: #dddddd;

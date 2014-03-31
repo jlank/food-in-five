@@ -6,113 +6,115 @@ html
     meta(name='mobile-web-app-capable', content='yes')
     meta(name='apple-mobile-web-app-capable', content='yes')
     meta(name="apple-mobile-web-app-status-bar-style", content="black")
-    title Framework7
+    title Food in Five
     link(rel="stylesheet", href="../build/css/framework7.css")
     link(rel="stylesheet", href="css/kitchen-sink.css")
+    link(rel="stylesheet", href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css")
   body
     .statusbar-overlay
     .panel-overlay
     .panel.panel-left.panel-cover
       .content-block-title Left Panel
       .content-block
-        p This is a side panel. You can close it by clicking outsite or on this link: 
+        p This is a side panel. You can close it by clicking outsite or on this link:
           a(href="#").close-panel close me
-          | . You can put here anything, even another isolated view like in 
+          | . You can put here anything, even another isolated view like in
           a(href="#", data-panel="right").open-panel Right Panel
       .content-block-title Framework7 Kitchen Sink
       .list-block
         ul
           li
-            a(href="modals.html").close-panel.item-link 
+            a(href="modals.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Modals
+        //
           li
             a(href="popover.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Popover
-          
+
           li
             a(href="tabs.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Tabs
           li
             a(href="panels.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Side Panels
           li
             a(href="list-view.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title List View
           li
             a(href="swipe-delete.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Swipe To Delete
           li
             a(href="forms.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Forms
           li
             a(href="messages.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Messages
           li
             a(href="grid.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Grid
           li
             a(href="preloader.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Preloader
           li
             a(href="deep-navbar.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Deep Dynamic Navbar
           li
             a(href="hide-navbar-toolbar.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Hide Navbar & Toolbar
           li
             a(href="transitions.html").close-panel.item-link
               .item-content
                 .item-media
                   i.icon.icon-f7
-                .item-inner 
+                .item-inner
                   .item-title Transitions And Effects
       .content-block
         p Long text block goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem urna, gravida non scelerisque id, fringilla ac velit. Phasellus elementum a ipsum at ornare. Mauris sagittis rhoncus euismod. Integer convallis augue eu lacus ultrices, in dictum elit consequat. Nulla faucibus massa id felis egestas eleifend. Proin consequat dignissim magna ut scelerisque. Vestibulum ac lorem semper, posuere sapien nec, pharetra massa. Nulla a tellus facilisis, sollicitudin quam porta, aliquam lorem. Fusce dignissim eros ac diam molestie, ut ultrices lorem tristique. Ut facilisis augue ac nisi egestas malesuada. Nunc posuere tortor quis eleifend mollis. Aliquam erat volutpat. Donec feugiat elit tellus, nec convallis orci elementum in. Sed urna mi, vestibulum id tempus id, pretium et ante. Pellentesque eget sollicitudin ligula. Phasellus pellentesque velit eu porta suscipit.
@@ -125,22 +127,22 @@ html
             .right
         .pages.navbar-through
           .page(data-page="panel-right1")
-            .page-content 
+            .page-content
               .content-block
-                p This is a right side panel. You can close it by clicking outsite or on this link: 
+                p This is a right side panel. You can close it by clicking outsite or on this link:
                   a(href="#").close-panel close me
                   | . You can put here anything, even another isolated view, try it:
               .list-block
                 ul
                   li
-                    a(href="panel-right2.html").item-link 
+                    a(href="panel-right2.html").item-link
                       .item-content
-                        .item-inner 
+                        .item-inner
                           .item-title Right panel page 2
                   li
                     a(href="panel-right3.html").item-link
                       .item-content
-                        .item-inner 
+                        .item-inner
                           .item-title Right panel page 3
 
     .views
@@ -148,7 +150,7 @@ html
         .navbar
           .navbar-inner
             //- .left
-            .center.sliding Framework7
+            .center.sliding Food in Five
             .right
               a(href="#").open-panel.link.icon-only
                 i.icon.icon-bars-blue
@@ -159,121 +161,125 @@ html
         .pages.navbar-through.toolbar-through
           .page(data-page="index")
             .page-content
-              .content-block-title Welcome To Framework7
               .content-block
-                p 
-                  a(href="about.html").button Read About Framework7
-              .content-block-title Framework7 Kitchen Sink
+                p(class="food_title") 2 Amys Pizza
+              .content-block
+                .food_circle(class="ui-draggable food_circle" id="draggable")
+              //.content-block
+                #droppable.ui-widget-header
+                  p Drop here
+
               .list-block
+              //
                 ul
                   li
-                    a(href="modals.html").item-link 
+                    a(href="modals.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Modals
                   li
-                    a(href="popover.html").item-link 
+                    a(href="popover.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Popover
                   li
-                    a(href="tabs.html").item-link 
+                    a(href="tabs.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Tabs
                   li
-                    a(href="panels.html").item-link 
+                    a(href="panels.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Side Panels
                   li
-                    a(href="list-view.html").item-link 
+                    a(href="list-view.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title List View
                   li
-                    a(href="media-lists.html").item-link 
+                    a(href="media-lists.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Media Lists
                   li
-                    a(href="swipe-delete.html").item-link 
+                    a(href="swipe-delete.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Swipe To Delete
                   li
-                    a(href="pull-to-refresh.html").item-link 
+                    a(href="pull-to-refresh.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Pull To Refresh
                   li
-                    a(href="forms.html").item-link 
+                    a(href="forms.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Forms
                   li
-                    a(href="messages.html").item-link 
+                    a(href="messages.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Messages
                   li
-                    a(href="grid.html").item-link 
+                    a(href="grid.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Grid
                   li
-                    a(href="preloader.html").item-link 
+                    a(href="preloader.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Preloader
                   li
-                    a(href="deep-navbar.html").item-link 
+                    a(href="deep-navbar.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Deep Dynamic Navbar
                   li
-                    a(href="hide-navbar-toolbar.html").item-link 
+                    a(href="hide-navbar-toolbar.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Hide Navbar & Toolbar
                   li
-                    a(href="transitions.html").item-link 
+                    a(href="transitions.html").item-link
                       .item-content
                         .item-media
                           i.icon.icon-f7
-                        .item-inner 
+                        .item-inner
                           .item-title Transitions And Effects
-              .content-block-title Core Features
-              .content-block
-                p 
+              //.content-block-title Core Features
+              //.content-block
+                p
                   a(href="core-features.html").button Read About Core Features
     .popup
       .view.navbar-fixed
@@ -338,3 +344,7 @@ html
                   .item-subtitle Michael Jackson
     script(type="text/javascript", src="../build/js/framework7.js")
     script(type="text/javascript", src="js/kitchen-sink.js")
+    script(type="text/javascript", src="//code.jquery.com/jquery-1.9.1.js")
+    script(type="text/javascript", src="//code.jquery.com/ui/1.10.4/jquery-ui.js")
+    script(type="text/javascript", src="//raw.github.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js")
+    script(type="text/javascript", src="js/dnd.js")

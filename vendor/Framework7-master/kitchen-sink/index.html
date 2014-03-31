@@ -6,9 +6,10 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Framework7</title>
+    <title>Food in Five</title>
     <link rel="stylesheet" href="../build/css/framework7.css">
     <link rel="stylesheet" href="css/kitchen-sink.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   </head>
   <body>
     <div class="statusbar-overlay"></div>
@@ -16,7 +17,7 @@
     <div class="panel panel-left panel-cover">
       <div class="content-block-title">Left Panel</div>
       <div class="content-block">
-        <p>This is a side panel. You can close it by clicking outsite or on this link: <a href="#" class="close-panel">close me</a>. You can put here anything, even another isolated view like in <a href="#" data-panel="right" class="open-panel">Right Panel</a></p>
+        <p>This is a side panel. You can close it by clicking outsite or on this link:<a href="#" class="close-panel">close me</a>. You can put here anything, even another isolated view like in<a href="#" data-panel="right" class="open-panel">Right Panel</a></p>
       </div>
       <div class="content-block-title">Framework7 Kitchen Sink</div>
       <div class="list-block">
@@ -28,91 +29,94 @@
                   <div class="item-title">Modals</div>
                 </div>
               </div></a></li>
-          <li><a href="popover.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Popover</div>
-                </div>
-              </div></a></li>
-          <li><a href="tabs.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Tabs</div>
-                </div>
-              </div></a></li>
-          <li><a href="panels.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Side Panels</div>
-                </div>
-              </div></a></li>
-          <li><a href="list-view.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">List View</div>
-                </div>
-              </div></a></li>
-          <li><a href="swipe-delete.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Swipe To Delete</div>
-                </div>
-              </div></a></li>
-          <li><a href="forms.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Forms</div>
-                </div>
-              </div></a></li>
-          <li><a href="messages.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Messages</div>
-                </div>
-              </div></a></li>
-          <li><a href="grid.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Grid</div>
-                </div>
-              </div></a></li>
-          <li><a href="preloader.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Preloader</div>
-                </div>
-              </div></a></li>
-          <li><a href="deep-navbar.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Deep Dynamic Navbar</div>
-                </div>
-              </div></a></li>
-          <li><a href="hide-navbar-toolbar.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Hide Navbar & Toolbar</div>
-                </div>
-              </div></a></li>
-          <li><a href="transitions.html" class="close-panel item-link">
-              <div class="item-content">
-                <div class="item-media"><i class="icon icon-f7"></i></div>
-                <div class="item-inner">
-                  <div class="item-title">Transitions And Effects</div>
-                </div>
-              </div></a></li>
         </ul>
+        <!--
+        li
+          a(href="popover.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Popover
+                
+        li
+          a(href="tabs.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Tabs
+        li
+          a(href="panels.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Side Panels
+        li
+          a(href="list-view.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title List View
+        li
+          a(href="swipe-delete.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Swipe To Delete
+        li
+          a(href="forms.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Forms
+        li
+          a(href="messages.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Messages
+        li
+          a(href="grid.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Grid
+        li
+          a(href="preloader.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Preloader
+        li
+          a(href="deep-navbar.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Deep Dynamic Navbar
+        li
+          a(href="hide-navbar-toolbar.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Hide Navbar & Toolbar
+        li
+          a(href="transitions.html").close-panel.item-link
+            .item-content
+              .item-media
+                i.icon.icon-f7
+              .item-inner
+                .item-title Transitions And Effects
+        -->
       </div>
       <div class="content-block">
         <p>Long text block goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem urna, gravida non scelerisque id, fringilla ac velit. Phasellus elementum a ipsum at ornare. Mauris sagittis rhoncus euismod. Integer convallis augue eu lacus ultrices, in dictum elit consequat. Nulla faucibus massa id felis egestas eleifend. Proin consequat dignissim magna ut scelerisque. Vestibulum ac lorem semper, posuere sapien nec, pharetra massa. Nulla a tellus facilisis, sollicitudin quam porta, aliquam lorem. Fusce dignissim eros ac diam molestie, ut ultrices lorem tristique. Ut facilisis augue ac nisi egestas malesuada. Nunc posuere tortor quis eleifend mollis. Aliquam erat volutpat. Donec feugiat elit tellus, nec convallis orci elementum in. Sed urna mi, vestibulum id tempus id, pretium et ante. Pellentesque eget sollicitudin ligula. Phasellus pellentesque velit eu porta suscipit.</p>
@@ -131,7 +135,7 @@
           <div data-page="panel-right1" class="page">
             <div class="page-content">
               <div class="content-block">
-                <p>This is a right side panel. You can close it by clicking outsite or on this link: <a href="#" class="close-panel">close me</a>. You can put here anything, even another isolated view, try it:</p>
+                <p>This is a right side panel. You can close it by clicking outsite or on this link:<a href="#" class="close-panel">close me</a>. You can put here anything, even another isolated view, try it:</p>
               </div>
               <div class="list-block">
                 <ul>
@@ -158,7 +162,7 @@
       <div class="view view-main">
         <div class="navbar">
           <div class="navbar-inner">
-            <div class="center sliding">Framework7</div>
+            <div class="center sliding">Food in Five</div>
             <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars-blue"></i></a></div>
           </div>
         </div>
@@ -168,124 +172,131 @@
         <div class="pages navbar-through toolbar-through">
           <div data-page="index" class="page">
             <div class="page-content">
-              <div class="content-block-title">Welcome To Framework7</div>
               <div class="content-block">
-                <p><a href="about.html" class="button">Read About Framework7</a></p>
+                <p class="food_title">2 Amys Pizza</p>
               </div>
-              <div class="content-block-title">Framework7 Kitchen Sink</div>
-              <div class="list-block">
-                <ul>
-                  <li><a href="modals.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Modals</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="popover.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Popover</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="tabs.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Tabs</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="panels.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Side Panels</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="list-view.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">List View</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="media-lists.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Media Lists</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="swipe-delete.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Swipe To Delete</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="pull-to-refresh.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Pull To Refresh</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="forms.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Forms</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="messages.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Messages</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="grid.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Grid</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="preloader.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Preloader</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="deep-navbar.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Deep Dynamic Navbar</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="hide-navbar-toolbar.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Hide Navbar & Toolbar</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="transitions.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-media"><i class="icon icon-f7"></i></div>
-                        <div class="item-inner">
-                          <div class="item-title">Transitions And Effects</div>
-                        </div>
-                      </div></a></li>
-                </ul>
-              </div>
-              <div class="content-block-title">Core Features</div>
               <div class="content-block">
-                <p><a href="core-features.html" class="button">Read About Core Features</a></p>
+                <div id="draggable" class="food_circle ui-draggable food_circle"></div>
               </div>
+              <!--.content-block
+              #droppable.ui-widget-header
+                p Drop here
+                
+              -->
+              <div class="list-block"></div>
+              <!--
+              ul
+                li
+                  a(href="modals.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Modals
+                li
+                  a(href="popover.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Popover
+                li
+                  a(href="tabs.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Tabs
+                li
+                  a(href="panels.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Side Panels
+                li
+                  a(href="list-view.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title List View
+                li
+                  a(href="media-lists.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Media Lists
+                li
+                  a(href="swipe-delete.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Swipe To Delete
+                li
+                  a(href="pull-to-refresh.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Pull To Refresh
+                li
+                  a(href="forms.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Forms
+                li
+                  a(href="messages.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Messages
+                li
+                  a(href="grid.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Grid
+                li
+                  a(href="preloader.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Preloader
+                li
+                  a(href="deep-navbar.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Deep Dynamic Navbar
+                li
+                  a(href="hide-navbar-toolbar.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Hide Navbar & Toolbar
+                li
+                  a(href="transitions.html").item-link
+                    .item-content
+                      .item-media
+                        i.icon.icon-f7
+                      .item-inner
+                        .item-title Transitions And Effects
+              -->
+              <!--.content-block-title Core Features-->
+              <!--.content-block
+              p
+                a(href="core-features.html").button Read About Core Features
+              -->
             </div>
           </div>
         </div>
@@ -362,5 +373,9 @@
     </div>
     <script type="text/javascript" src="../build/js/framework7.js"></script>
     <script type="text/javascript" src="js/kitchen-sink.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="//raw.github.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="js/dnd.js"></script>
   </body>
 </html>
