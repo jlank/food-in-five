@@ -161,10 +161,19 @@ html
         .pages.navbar-through.toolbar-through
           .page(data-page="index")
             .page-content
-              .content-block
-                p(class="food_title") 2 Amys Pizza
+              .content-block.food_title
+                p 2 Amys Pizza
               .content-block.food_images
                 .food_circle(class="ui-draggable food_circle" id="draggable")
+              br
+              .content
+                .round-container
+                  a#red.round-content
+                        | ⃠
+                .round-container
+                  a#green.round-content
+                        | $
+
               //.content-block
                 #droppable.ui-widget-header
                   p Drop here

@@ -1,3 +1,79 @@
+// start buttons vvvvv http://codepen.io/nmutiara/pen/IsDex
+.content {
+  margin: 0px;
+}
+
+.round-container {
+  margin: 0em 3em;
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  background: -moz-linear-gradient(top, #bbbbbb, #eeeeee);
+  background: -webkit-linear-gradient(top, #bbbbbb, #eeeeee);
+  background: linear-gradient(to bottom, #bbbbbb, #eeeeee);
+  -moz-box-shadow: inset 0 -1px 10px #999999, 0 -1px 1px #aaaaaa, 0 2px 1px white;
+  -webkit-box-shadow: inset 0 -1px 10px #999999, 0 -1px 1px #aaaaaa, 0 2px 1px white;
+  box-shadow: inset 0 -1px 10px #999999, 0 -1px 1px #aaaaaa, 0 2px 1px white;
+}
+
+.round-content {
+  display: block;
+  cursor: pointer;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transition: -moz-transform 200ms ease-in;
+  -o-transition: -o-transform 200ms ease-in;
+  -webkit-transition: -webkit-transform 200ms ease-in;
+  transition: transform 140ms ease-in;
+  background: -moz-linear-gradient(top, #ffffff, #dddddd);
+  background: -webkit-linear-gradient(top, #ffffff, #dddddd);
+  background: linear-gradient(to bottom, #ffffff, #dddddd);
+  background-color: #fff;
+  -moz-box-shadow: 0 2px 7px #555555;
+  -webkit-box-shadow: 0 2px 7px #555555;
+  box-shadow: 0 2px 7px #555555;
+  text-shadow: 0 -1px 1px #111111;
+  position: absolute;
+  text-align: center;
+  color: green;
+  font-size: 50px;
+  line-height: 60px;
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 80px;
+  -webkit-border-radius: 80px;
+  border-radius: 80px;
+}
+.round-content:active {
+  background-color: #eee;
+  color: green;
+  -moz-transform: rotate(-10deg) scale(0.9);
+  -ms-transform: rotate(-10deg) scale(0.9);
+  -webkit-transform: rotate(-10deg) scale(0.9);
+  transform: rotate(-10deg) scale(0.9);
+}
+
+#red {
+  line-height: 54px;
+  font-weight: bold;
+  color: #990000;
+}
+
+#green:active {
+  -moz-transform: rotate(10deg) scale(0.9);
+  -ms-transform: rotate(10deg) scale(0.9);
+  -webkit-transform: rotate(10deg) scale(0.9);
+  transform: rotate(10deg) scale(0.9);
+}
+
+// end buttons ^^^^ http://codepen.io/nmutiara/pen/IsDex
+
 // http://jsfiddle.net/GPMta/
 @-webkit-keyframes Bounce-In
 {
@@ -14,10 +90,16 @@
 // http://jsfiddle.net/BYFmn/ use this with below link to try to create a mask that changes the color of the border
 // https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
 // http://codepen.io/HugoGiraudel/pen/BHEwo : http://css-tricks.com/css-pie-timer/
-#draggable { position: absolute; left: 50px;}
-#droppable { position: absolute; left: 500px; width: 450px; height: 450px; padding: 0.5em; margin: 10px; }
+//#draggable { position: absolute; left: 50px;}
+//#droppable { position: absolute; left: 500px; width: 450px; height: 450px; padding: 0.5em; margin: 10px; }
+
+.food_images {
+  height: 190px;
+}
 
 .food_circle {
+  position: absolute;
+  left: 50px;
   width: 230px;
   height: 230px;
   -moz-border-radius: 50%;
@@ -40,6 +122,11 @@
 .food_title {
   text-align: center;
   font-size: 20px;
+  margin: 0px;
+}
+
+.food_title p {
+  margin-bottom: 0px;
 }
 
 .panel {

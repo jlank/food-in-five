@@ -1,5 +1,10 @@
 // http://jqueryui.com/droppable/#default
 $(function() {
+/* to prevent scrolling
+  document.ontouchstart = function(e){
+      e.preventDefault();
+  }
+*/
   $( "#draggable" ).draggable();
   $( "#droppable" ).droppable({
     drop: function( event, ui ) {
@@ -48,13 +53,14 @@ $(function() {
     }
 
     var onMouseUp = function() {
-        $(document).unbind("mousemove mouseup");
+        //$(document).unbind("mousemove mouseup");
+        $($d).unbind("mousemove mouseup");
     }
 
     $d.draggable({
         start: function(e, ui) {
             $d.data("mouseEvents", [e]);
-            $(document)
+            $($d)
                 .mousemove(onMouseMove)
                 .mouseup(onMouseUp);
         },
@@ -95,9 +101,11 @@ $(function() {
                         console.log($d.position());
                         if (Math.max(Math.abs(speedX), Math.abs(speedY)) * 900 === 0) {
                           console.log('its over!');
-                          $('.food_title').text(rest.pop().name)
+                          var new_spot = rest.pop();
+                          $('.food_title > p').text(new_spot.name)
                           var id = makeid();
                           $('.food_images').append('<div id="drag' + id + '" class="ui-draggable food_circle"></div>');
+                          $('.food_circle').css("background-image", "url(" + new_spot.img + ")");
 
                           $("#" + div_id).remove();
                           do_the_drag('drag' + id);
@@ -124,3 +132,93 @@ $(function() {
   }
   do_the_drag('draggable');
 });
+
+// http://stackoverflow.com/questions/2890361/disable-scrolling-in-an-iphone-web-application
+// breaks scrolling
+(function registerScrolling($) {
+    var prevTouchPosition = {},
+        scrollYClass = 'scroll-y',
+        scrollXClass = 'scroll-x',
+        searchTerms = '.' + scrollYClass + ', .' + scrollXClass;
+
+    $('body').on('touchstart', function (e) {
+        var $scroll = $(e.target).closest(searchTerms),
+            targetTouch = e.originalEvent.targetTouches[0];
+
+        // Store previous touch position if within a scroll element
+        prevTouchPosition = $scroll.length ? { x: targetTouch.pageX, y: targetTouch.pageY } : {};
+    });
+
+$('body').on('touchmove', function (e) {
+    var $scroll = $(e.target).closest(searchTerms),
+        targetTouch = e.originalEvent.targetTouches[0];
+
+    if (prevTouchPosition && $scroll.length) {
+        // Set move helper and update previous touch position
+        var move = {
+            x: targetTouch.pageX - prevTouchPosition.x,
+            y: targetTouch.pageY - prevTouchPosition.y
+        };
+        prevTouchPosition = { x: targetTouch.pageX, y: targetTouch.pageY };
+
+        // Check for scroll-y or scroll-x classes
+        if ($scroll.hasClass(scrollYClass)) {
+            var scrollHeight = $scroll[0].scrollHeight,
+                outerHeight = $scroll.outerHeight(),
+
+                atUpperLimit = ($scroll.scrollTop() === 0),
+                atLowerLimit = (scrollHeight - $scroll.scrollTop() === outerHeight);
+
+            if (scrollHeight > outerHeight) {
+                // If at either limit move 1px away to allow normal scroll behavior on future moves,
+                // but stop propagation on this move to remove limit behavior bubbling up to body
+                if (move.y > 0 && atUpperLimit) {
+                    $scroll.scrollTop(1);
+                    e.stopPropagation();
+                } else if (move.y < 0 && atLowerLimit) {
+                    $scroll.scrollTop($scroll.scrollTop() - 1);
+                    e.stopPropagation();
+                }
+
+                // If only moving right or left, prevent bad scroll.
+                if(Math.abs(move.x) > 0 && Math.abs(move.y) < 3){
+                  e.preventDefault()
+                }
+
+                // Normal scrolling behavior passes through
+            } else {
+                // No scrolling / adjustment when there is nothing to scroll
+                e.preventDefault();
+            }
+        } else if ($scroll.hasClass(scrollXClass)) {
+            var scrollWidth = $scroll[0].scrollWidth,
+                outerWidth = $scroll.outerWidth(),
+
+                atLeftLimit = $scroll.scrollLeft() === 0,
+                atRightLimit = scrollWidth - $scroll.scrollLeft() === outerWidth;
+
+            if (scrollWidth > outerWidth) {
+                if (move.x > 0 && atLeftLimit) {
+                    $scroll.scrollLeft(1);
+                    e.stopPropagation();
+                } else if (move.x < 0 && atRightLimit) {
+                    $scroll.scrollLeft($scroll.scrollLeft() - 1);
+                    e.stopPropagation();
+                }
+                // If only moving up or down, prevent bad scroll.
+                if(Math.abs(move.y) > 0 && Math.abs(move.x) < 3){
+                  e.preventDefault();
+                }
+
+                // Normal scrolling behavior passes through
+            } else {
+                // No scrolling / adjustment when there is nothing to scroll
+                e.preventDefault();
+            }
+        }
+    } else {
+        // Prevent scrolling on non-scrolling elements
+        e.preventDefault();
+    }
+});
+})(jQuery);
