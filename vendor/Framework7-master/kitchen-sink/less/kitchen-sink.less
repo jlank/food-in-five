@@ -1,3 +1,19 @@
+// http://jsfiddle.net/GPMta/
+@-webkit-keyframes Bounce-In
+{
+    0% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+    60% { -webkit-transform: scale(0.7) }
+    80% { -webkit-transform: scale(1.0) }
+    90% { -webkit-transform: scale(0.9) }
+    100% { -webkit-transform: scale(1.0) }
+}
+
+// http://thecodeplayer.com/walkthrough/simple-yet-amazing-css3-border-transition-effects
+// http://jsfiddle.net/BYFmn/504/
+// http://jsfiddle.net/BYFmn/ use this with below link to try to create a mask that changes the color of the border
+// https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+// http://codepen.io/HugoGiraudel/pen/BHEwo : http://css-tricks.com/css-pie-timer/
 #draggable { position: absolute; left: 50px;}
 #droppable { position: absolute; left: 500px; width: 450px; height: 450px; padding: 0.5em; margin: 10px; }
 
@@ -11,8 +27,15 @@
   margin-left:auto;
   margin-right:auto;
   margin: 10px 10px 10px 0;
-  border: 3px solid grey;
+  border: 1px solid white;
   background-size: cover;
+  -webkit-box-shadow: 0 0 0 5px rgba(255, 255, 255, .6) inset, 0 0 0 1px rgba(0,0,0,.5), 2px 2px 10px rgba(0,0,0,.6);
+  -webkit-animation-name: Bounce-In;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: .4s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.2s;
+
 }
 .food_title {
   text-align: center;

@@ -14,6 +14,12 @@ $(function() {
 
 // http://jsfiddle.net/529KH/
 $(function() {
+  var w_height = $(window).height();
+  var w_width = $(window).width();
+  console.log({"height": w_height, "width": w_width });
+});
+
+$(function() {
     var $d = $("#draggable");
 
     var x1, x2,
@@ -72,12 +78,15 @@ $(function() {
                 // Momentum
                 var lastStepTime = new Date();
                 $d.animate({ textIndent: 0 }, {
-                    duration: Math.max(Math.abs(speedX), Math.abs(speedY)) * 2000,
+                    duration: Math.max(Math.abs(speedX), Math.abs(speedY)) * 900,
                     step: function(currentStep){
                         speedX *= (currentStep / 80);
                         speedY *= (currentStep / 80);
 
                         console.log($d.position());
+                        if (Math.max(Math.abs(speedX), Math.abs(speedY)) * 900 === 0) {
+                          console.log('its over!');
+                        }
                         var now = new Date();
                         var stepDuration = now.getTime() - lastStepTime.getTime();
 
