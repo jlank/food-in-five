@@ -17,10 +17,19 @@ $(function() {
   var w_height = $(window).height();
   var w_width = $(window).width();
   console.log({"height": w_height, "width": w_width });
-});
+  var rest = [ {"name": "Circa", "img": "http://www.circaatfoggybottom.com/media/images/photos/DSC_8863.jpg"},
+               {"name": "Ted's Bulletin", "img": "https://lh4.googleusercontent.com/-1QyWMN6ripk/Ur_EXqkG6_I/AAAAAADDzpw/t7NJwf25YAk/s203/photo.jpg"}]
 
-$(function() {
-    var $d = $("#draggable");
+  function makeid() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for( var i=0; i < 5; i++ ) text += possible.charAt(Math.floor(Math.random() * possible.length));
+      return text;
+  }
+
+  var do_the_drag = function (div_id) {
+    //var $d = $("#draggable");
+    var $d = $("#" + div_id);
 
     var x1, x2,
         y1, y2,
@@ -86,6 +95,12 @@ $(function() {
                         console.log($d.position());
                         if (Math.max(Math.abs(speedX), Math.abs(speedY)) * 900 === 0) {
                           console.log('its over!');
+                          $('.food_title').text(rest.pop().name)
+                          var id = makeid();
+                          $('.food_images').append('<div id="drag' + id + '" class="ui-draggable food_circle"></div>');
+
+                          $("#" + div_id).remove();
+                          do_the_drag('drag' + id);
                         }
                         var now = new Date();
                         var stepDuration = now.getTime() - lastStepTime.getTime();
@@ -106,4 +121,6 @@ $(function() {
             }
         }
     });
+  }
+  do_the_drag('draggable');
 });
